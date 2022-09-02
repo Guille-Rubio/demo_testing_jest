@@ -1,17 +1,21 @@
-const truthMachine = require('../truthMachine');
+const truthMachine = require('../utils/truthMachine');
 
-test('both true equals true', () => {
-    expect(truthMachine(true, true)).toBe(true);
-});
+describe('truthmachine', () => {
+    test('both true equals true', () => {
+        expect(truthMachine(true, true)).toBeTruthy();
+    });
 
-test('first true and second false equals false', () => {
-    expect(truthMachine(true, false)).toBe(false);
-});
+    test('first true and second false equals false', () => {
+        expect(truthMachine(true, false)).toBe(false);
+    });
 
-test('first false and second true equals false', () => {
-    expect(truthMachine(false, true)).toBe(false);
-});
+    test('first false and second true equals false', () => {
+        expect(truthMachine(false, true)).toBe(false);
+    });
 
-test('both false equals false', () => {
-    expect(truthMachine(false, false)).toBe(false);
-});
+    test('both false equals false', () => {
+        expect(truthMachine(false, false)).toBe(false);
+    });
+
+})
+
