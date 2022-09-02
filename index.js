@@ -1,5 +1,4 @@
 const express = require('express');
-const { add } = require('./utils/calculator');
 const app = express()
 const port = 3000
 
@@ -25,11 +24,7 @@ app.post('/add', (req, res) => {
         console.log(error.message)
         res.status(400).json({ error: error.message });
     }
-
 });
-
-
-
 
 
 //Hay que exportar el servidor para utilizarlo en el test, lo declaramos en una variable. 
@@ -37,7 +32,5 @@ app.post('/add', (req, res) => {
 const server = app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 });
-
-
 
 module.exports = server;

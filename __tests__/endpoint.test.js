@@ -21,7 +21,7 @@ it('test GET /hello the test endpoint', async () => {//Test ruta GET /hello
 it('test POST /add', async () => { //Test ruta POST /add
   request
     .post('/add')
-    .send(
+    .send(//body de la petición POST
       {
         "num1": 1,
         "num2": 2
